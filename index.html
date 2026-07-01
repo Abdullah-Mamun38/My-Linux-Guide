@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Linux Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 p-6 md:p-10">
+
+    <div class="max-w-4xl mx-auto space-y-12">
+
+        <section>
+            <h1 class="text-4xl font-bold mb-8 text-black border-b pb-4">Linux Learning Guide</h1>
+            <h2 class="text-3xl font-bold mb-6 text-black border-b pb-2">1. Finding Files using "locate"</h2>
+            
+            <div class="space-y-10">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4">Example: For finding any file, you can use <code class="text-green-700 font-mono">locate specific word</code>.</h3>
+                    <div class="bg-white border border-gray-300 rounded-xl p-4 shadow-sm mb-2">
+                        <div class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Bash</div>
+                        <code class="text-green-700 font-mono">locate filename</code>
+                    </div>
+                    <div class="bg-white border border-gray-300 rounded-xl p-4 shadow-sm">
+                        <div class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Output</div>
+                        <pre class="text-blue-700 font-mono text-sm whitespace-pre-wrap break-all">/mnt/c/rtools45/usr/share/man/man3/curl_mime_filename.3.gz</pre>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4">Example: For finding specific file formats, use <code class="text-green-700 font-mono">locate .fileformat</code>.</h3>
+                    <div class="bg-white border border-gray-300 rounded-xl p-4 shadow-sm mb-2">
+                        <div class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Bash</div>
+                        <code class="text-green-700 font-mono">locate .txt</code> <br>
+                        <code class="text-green-700 font-mono">locate .pdf</code>
+                    </div>
+                    <div class="bg-white border border-gray-300 rounded-xl p-4 shadow-sm">
+                        <div class="text-xs text-gray-400 mb-1 uppercase tracking-wider">Output</div>
+                        <pre class="text-blue-700 font-mono text-sm whitespace-pre-wrap break-all">/usr/share/vim/vim81/tutor/README.txt
+/usr/share/doc/shared-mime-info/shared-mime-info-spec.pdf</pre>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl shadow-sm my-6">
+                    <div class="text-yellow-700 font-bold uppercase text-xs tracking-widest mb-1">Note</div>
+                    <p class="text-yellow-800 text-base">Always use <code class="bg-yellow-100 px-1 rounded font-mono">sudo updatedb</code> if you cannot find newly created files.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
